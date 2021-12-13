@@ -1,2 +1,70 @@
+%trd
+	transition: .35s ease
+body
+	font-size: 18px
+
 .section
-	+w(1170px)
+	+w(1200px)
+
+.head
+	&-nav
+		&-item
+			position: relative
+			&:after
+				@extend %trd
+				+af
+				width: 0
+				height: 2px
+				background-color: $blue-dark
+				position: absolute
+				left: 50%
+				bottom: 10px
+			&:hover:after
+				width: 100%
+				left: 0
+	&-button
+		@extend %trd
+		&:hover
+			background-color: $orange
+			color: $white
+
+.title
+	font-size: 58px
+.subtitle
+	font-size: 36px
+.button
+	@extend %trd
+	border: 1px solid $orange
+	&:hover
+		background-color: $white
+		color: $orange
+
+.fb
+	padding-top: 152px
+
+.welcome
+	padding-top: 0
+	padding-bottom: 136px
+	&-inner
+		.title
+			margin-bottom: 25px
+	&-img
+		transform: translate(-80px,136px)
+
+.we
+	&-section
+		justify-content: flex-start
+	&-left
+		margin-right: 175px
+
+.why
+	&-list
+		justify-content: center
+	&-item
+		&:nth-child(2n)
+			margin-left: 215px
+
+.cust
+	padding: 170px 0 200px
+	&-list
+		padding-top: 97px

@@ -1,2 +1,15 @@
 header.head
-	.section
+  .section.head-section
+    .head-logo
+      a(href='./')
+        +img('header_logo.svg')
+    button(data-click-action='front:burgerClick').head-burger
+      span
+      span
+      span
+    nav.head-nav
+      a(href='./services.html').head-nav-item Services
+      a(href='./products.html').head-nav-item Our Products
+      a(href='./about.html').head-nav-item About us
+      a(href='./careers.html').head-nav-item Careers
+    button(data-click-action='front:hireUs').head-button Hire us

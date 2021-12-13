@@ -1,15 +1,18 @@
 @import "../../../../core/mixins/reset"
 @import "../../../../core/mixins/mixins"
 @import "vars"
+@import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/plus-jakarta-display.min.css")
 $dpx: 14px
 $font_body: 14px
 //+font_inc($f_reg,'roboto-regular.ttf')
 .set,body
 	+wh(100%)
 body
-	+font($font_body,$f_reg,$black)
+	+font($font_body,$f_reg,$blue-dark)
 	min-height: 100vh
 	overflow-x: hidden
+*
+	line-height: 1.9
 
 input,button
 	font-family: inherit

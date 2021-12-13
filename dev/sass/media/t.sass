@@ -2,3 +2,99 @@
 	+w(720px)
 	margin: 0 auto
 	padding: 0
+
+.head
+	&-section
+		justify-content: flex-start
+	&,&.active
+		height: initial
+	&-logo
+		margin-right: auto
+	&-burger
+		display: none
+	&-nav
+		width: initial
+		margin: 0 30px 0 0
+		flex-direction: row
+		&-item
+			margin-right: 30px
+			font-size: 16px
+			&:last-child
+				margin-right: 0
+	&-button
+		margin: 0
+
+.fb
+	padding-top: 100px
+
+.welcome
+	padding-top: 0
+	padding-bottom: 80px
+	&-section
+		height: initial
+		justify-content: space-between
+	&-inner
+		width: 48%
+		.text
+			max-width: 325px
+			margin: 20px 0 36px
+	&-bgc
+		background: url(img/welcome-bgc.svg) no-repeat 100%, linear-gradient(81.1deg, #F8FDFF 0%, #F9FDFF 100%)
+	&-img
+		width: 40%
+		transform: translateY(80px)
+		filter: none
+		opacity: 1
+		position: static
+
+.we
+	&-section
+		display: flex
+		justify-content: space-between
+		align-items: flex-end
+	&-left
+		width: 450px
+	&-item
+		padding-top: 80px
+		&:first-child
+			padding-top: 0
+		strong
+			font-size: 70px
+			
+.why
+	.subtitle
+		width: initial
+	&-list
+		padding-top: 100px
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-around
+	&-item
+		flex: 0 0 338px
+		&:nth-child(3),&:nth-child(4)
+			padding-bottom: 0
+		&-title
+			font-size: 24px
+
+.cust
+	background-image: url(img/customer-bgc.svg)
+	background-repeat: no-repeat
+	&-list
+		display: flex
+		align-items: flex-start
+		justify-content: center
+		flex-wrap: wrap
+	&-item
+		width: 50%
+		&:nth-child(3),&:nth-child(5)
+			span
+				width: 156px
+		&:nth-child(6),&:last-child
+			span
+				width: 190px
+		&:nth-child(7)
+			margin-bottom: 0
+	&-img
+		height: 100px
+		display: flex
+		align-items: flex-end
