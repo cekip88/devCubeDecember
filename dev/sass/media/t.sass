@@ -16,17 +16,19 @@
 		width: initial
 		margin: 0 30px 0 0
 		flex-direction: row
-		&-item
+		.link
 			margin-right: 30px
+			padding: 0
 			font-size: 16px
 			&:last-child
 				margin-right: 0
 	&-button
 		margin: 0
 
-.fb
-	padding-top: 100px
-
+.row
+	display: flex
+	align-items: center
+	justify-content: space-between
 .welcome
 	padding-top: 0
 	padding-bottom: 80px
@@ -37,9 +39,6 @@
 		width: 48%
 		.text
 			max-width: 325px
-			margin: 20px 0 36px
-	&-bgc
-		background: url(img/welcome-bgc.svg) no-repeat 100%, linear-gradient(81.1deg, #F8FDFF 0%, #F9FDFF 100%)
 	&-img
 		width: 40%
 		transform: translateY(80px)
@@ -47,10 +46,20 @@
 		opacity: 1
 		position: static
 
+.fb
+	padding: 100px 0 92px
+	.section
+		height: initial
+
+.fb,.welcome
+	&-inner
+		.text
+			margin: 20px 0 36px
+
+.bread-crumbs
+	margin-bottom: 20px
 .we
-	&-section
-		display: flex
-		justify-content: space-between
+	.row
 		align-items: flex-end
 	&-left
 		width: 450px
@@ -66,7 +75,6 @@
 		width: initial
 	&-list
 		padding-top: 100px
-		display: flex
 		flex-wrap: wrap
 		justify-content: space-around
 	&-item
@@ -77,10 +85,10 @@
 			font-size: 24px
 
 .cust
+	padding-bottom: 150px
 	background-image: url(img/customer-bgc.svg)
 	background-repeat: no-repeat
 	&-list
-		display: flex
 		align-items: flex-start
 		justify-content: center
 		flex-wrap: wrap
@@ -98,3 +106,204 @@
 		height: 100px
 		display: flex
 		align-items: flex-end
+
+.how
+	margin-top: -50px
+	padding-bottom: 100px
+	background-image: url(img/how-bgc.svg)
+	background-size: 280%
+	background-repeat: no-repeat
+	.subtitle
+		color: $white
+	&-list
+		width: 100%
+		flex-wrap: wrap
+	&-item
+		width: 50%
+		margin-bottom: 20px
+		&-number
+			top: 12px
+			left: 45px
+		&-title,.text
+			left: 104px
+		&-title
+			top: 73px
+		.text
+			top: 125px
+
+.our
+	padding-bottom: 100px
+	&-map
+		margin-top: 50px
+	&-place
+		padding-top: 0
+		display: flex
+		align-items: center
+		justify-content: center
+		position: absolute
+		img
+			display: block
+		&-inner
+			background-color: transparent
+			position: absolute
+			&,.text
+				color: $white
+	&-usa
+		top: 48px
+		left: -87px
+		&:after
+			top: initial
+			left: initial
+			bottom: -3px
+			right: -3px
+	&-ukr
+		top: 45px
+		right: 100px
+		&:after
+			top: initial
+			left: -3px
+			bottom: -3px
+			right: initial
+	&-isr
+		bottom: 18px
+		right: 100px
+		&:after
+			top: -3px
+			left: -3px
+			bottom: initial
+			right: initial
+
+.trust
+	background-image: url(img/trust-bgc.svg)
+	background-position: 0 40%
+	&:after
+		+af
+		+wh(200%)
+	&-list
+		width: 700px
+		flex-direction: row
+		justify-content: center
+		flex-wrap: wrap
+	&-item
+		margin-right: 70px
+		&:nth-child(4),&:last-child
+			margin-right: 0
+
+.together
+	&-row
+		align-items: flex-start
+	&-left
+		width: 325px
+		margin-bottom: 0
+		padding-top: 20px
+
+.services
+	.row
+		padding-top: 50px
+		align-items: flex-start
+	&-list
+		width: calc(50% - 15px)
+	&-item
+		margin-bottom: 30px
+		padding: 50px 30px
+
+.power
+	img
+		width: 300px
+		margin-top: 0
+		margin-left: 50px
+
+.who
+	.right
+		margin-left: 50px
+		flex-shrink: 0
+		flex-grow: 0
+
+.pluses
+	padding: 70px 0
+	.row
+		flex-direction: row
+		&:first-child
+			margin-bottom: 50px
+	.col
+		flex: 0 0 calc(50% - 10px)
+	&-img
+		margin-top: 0
+		display: flex
+		justify-content: center
+		order: initial
+.locations
+	padding: 30px 0
+	.left
+		.col
+			flex-direction: column
+			align-items: flex-start
+	.right
+		padding: 0
+	.row
+		align-items: stretch
+	&-item
+		padding: 37px 53px
+		.row
+			align-items: flex-end
+			justify-content: flex-start
+			.subtitle
+				margin-right: 13px
+				font-size: 24px
+				line-height: 45.6px
+			span
+				font-size: 16px
+				line-height: 37.4px
+	.middle
+		width: 1px
+		margin: 0 30px
+		flex-shrink: 0
+		flex-grow: 0
+		background-color: rgba(#A9D3F5,.3)
+
+.cloud
+	&-items
+		padding: 50px 0
+	&-item
+		padding: 37px 52px
+.contact
+	&-inner
+		padding-top: 50px
+		align-items: flex-start
+	.right
+		margin-top: 0
+		margin-left: 20px
+
+.foot
+	padding: 70px 0 57px
+	&-section
+		flex-wrap: nowrap
+		justify-content: space-between
+		&>.col
+			margin-right: 25px
+			&:first-child
+				width: initial
+	&-logo
+		align-self: initial
+	.col
+		margin-bottom: 0
+		align-items: flex-start
+		flex-shrink: 0
+		flex-grow: 0
+		&:nth-child(3)
+			text-align: left
+		&-last
+			width: 250px
+			justify-content: flex-end
+			.col
+				&:first-child
+					margin-right: 30px
+	.link
+		margin-bottom: 8px
+		&:last-child
+			margin-bottom: 0
+	&-copy
+		text-align: right
+
+
+

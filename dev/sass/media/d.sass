@@ -7,21 +7,6 @@ body
 	+w(1200px)
 
 .head
-	&-nav
-		&-item
-			position: relative
-			&:after
-				@extend %trd
-				+af
-				width: 0
-				height: 2px
-				background-color: $blue-dark
-				position: absolute
-				left: 50%
-				bottom: 10px
-			&:hover:after
-				width: 100%
-				left: 0
 	&-button
 		@extend %trd
 		&:hover
@@ -36,35 +21,204 @@ body
 	@extend %trd
 	border: 1px solid $orange
 	&:hover
-		background-color: $white
+		background-color: transparent
 		color: $orange
+.link
+	position: relative
+	&:after
+		@extend %trd
+		+af
+		+wh(0,2px)
+		background-color: #4F4D8E
+		position: absolute
+		left: 50%
+		bottom: 0
+	&-blue:after
+		background-color: #2778E9
+	&:hover
+		&:after
+			width: 100%
+			left: 0
+
+
+
+.welcome
+	padding-bottom: 136px
+	&-img
+		transform: translate(-80px,124px)
 
 .fb
 	padding-top: 152px
-
-.welcome
-	padding-top: 0
-	padding-bottom: 136px
+.fb,.welcome
 	&-inner
-		.title
-			margin-bottom: 25px
-	&-img
-		transform: translate(-80px,136px)
+		.text
+			margin-top: 25px
+.bread-crumbs
+	a
+		@extend %trd
+		&:hover
+			opacity: 1
 
 .we
-	&-section
+	.row
 		justify-content: flex-start
 	&-left
 		margin-right: 175px
+		.text
+			margin-top: 30px
+	&-img
+		margin-top: 70px
+		margin-bottom: 10px
+	&-item
+		span:last-child
+			margin-top: 18px
 
 .why
+	padding-top: 190px
+	background-position: 110% 44%
 	&-list
-		justify-content: center
+		width: 963px
+		margin: 0 auto
+		justify-content: flex-start
 	&-item
-		&:nth-child(2n)
-			margin-left: 215px
+		&:nth-child(1)
+			margin-right: 215px
+		&:nth-child(2)
+			flex: 0 0 366px
+		&:nth-child(3)
+			flex: 0 0 399px
+			margin-right: 152px
+		&:nth-child(4)
+			flex: 0 0 407px
 
 .cust
-	padding: 170px 0 200px
+	padding-top: 170px
 	&-list
 		padding-top: 97px
+
+.how
+	margin-top: -100px
+	background-size: initial
+	&-list
+		justify-content: space-between
+	&-item
+		width: calc((100% - 80px) / 3)
+		margin-bottom: 30px
+		&-title,.text
+			left: 104px
+		.text
+			width: 219px
+
+.our
+	padding-bottom: 50px
+	&-map
+		margin-top: 100px
+	&-usa
+		top: 211px
+		left: 30px
+	&-ukr
+		top: 188px
+		right: 305px
+	&-isr
+		bottom: 149px
+		right: 300px
+
+.trust
+	padding-top: 170px
+	background-position: 0 44%
+
+.together
+	&-left
+		padding-top: 50px
+		.text
+			margin: 15px 0 35px
+
+.power
+	padding: 99px 0 114px
+	.text
+		margin: 9px 0 34px
+	img
+		width: initial
+		margin-left: 163px
+
+.who
+	padding: 98px 0 92px
+	.subtitle
+		margin-bottom: 9px
+	.text
+		line-height: 2
+
+.pluses
+	padding: 120px 0 118px
+	.row
+		&:first-child
+			margin-bottom: 138px
+	.col
+		&:first-child
+			flex-basis: 528px
+		&:last-child
+			flex-basis: 562px
+	.subtitle
+		margin-bottom: 9px
+	.text:last-child
+		margin-top: 20px
+
+.checkbox-btn
+	span
+		&:last-child
+			position: relative
+			&:after
+				@extend %trd
+				+af
+				+wh(0,2px)
+				background-color: $blue-dark
+				position: absolute
+				left: 50%
+				bottom: 5px
+	&:hover
+		span
+			&:last-child
+				&:after
+					width: 100%
+					left: 0
+.locations
+	padding: 60px 0 120px
+	.middle
+		margin: 0 70px 0 60px
+	&-item
+		margin-top: 60px
+.more
+	@extend %trd
+	&:hover
+		background-color: $blue-dark
+		color: $white
+.cloud
+	&-items
+		padding-top: 100px
+		padding-bottom: 115px
+.contact
+	&-inner
+		padding-top: 120px
+	.right
+		margin-left: 138px
+		padding: 76px 75px 67px
+	.form
+		width: 600px
+		.row
+			.form-block
+				width: calc(50% - 20px)
+.form
+	&-block
+		input,textarea
+			font-size: 18px
+.foot
+	&-section
+		&>.col
+			&:nth-child(2),&:nth-child(3)
+				margin-top: -5px
+	&-copy
+		margin-top: 50px
+
+
+
+

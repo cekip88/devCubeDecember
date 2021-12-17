@@ -1,0 +1,22 @@
+extends template/main
+append vars
+  -
+    page_title = 'Our Products'
+block content
+  main
+    section.welcome-bgc.fb
+      .section
+        .bread-crumbs
+          a(href='./') Home /
+          span &nbsp;Our products
+        .fb-inner
+          h1.subtitle Our products
+          p.text Your one-stop to develop, integrate, and support your digital solutions ideas.
+          button(data-click-action='front:hireUs').button Hire us
+    section.power
+      .section.row
+        .col
+          h3.subtitle EDO4 powered by DevCube
+          p.text We've been working with e-commerce for so long that we've come up with our own professional software to ease and speed up manual DevOps tasks. We've called it EDO4. EDO4 is a development environment created by web developers for developers. This web application allows you to implement any website and application changes within minutes, work together on different projects, start new projects instantly and invite new team members fast. We realize that words will hardly convince you to use EDO4, that's why we offer you a free trial to try it out. We are confident in our software. Try it and see how handy it is!
+          button.button Try EDO4 for free
+        +img('powered-bgc.svg')

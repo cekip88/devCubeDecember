@@ -1,0 +1,68 @@
+extends template/main
+append vars
+  -
+    page_title = 'Careers'
+block content
+  main
+    section.welcome-bgc.fb
+      .section
+        .bread-crumbs
+          a(href='./') Home /
+          span &nbsp;Careers
+        .fb-inner
+          h1.subtitle Careers
+          p.text Your one-stop to develop, integrate, and support your digital solutions ideas.
+          button(data-click-action='front:hireUs').button Hire us
+    section.power
+      .section.row
+        .col
+          h3.subtitle Become a part of our team
+          p.text We aim to provide full-cycle software solutions with quick product-to-market delivery. With our team spread across the globe, we break through any cultural and linguistic barriers to understand our customers from every part of the world.
+        +img('powered-bgc.svg')
+    section.locations
+      .section.row
+        .left
+          .locations-title Locations
+          .col
+            button(data-click-action='front:locationFilter').checkbox-btn.active
+              span
+                +img('checkbox-inner.svg')
+              span All
+            button(data-click-action='front:locationFilter' data-location='usa').checkbox-btn
+              span
+                +img('checkbox-inner.svg')
+              span USA
+            button(data-click-action='front:locationFilter' data-location='israel').checkbox-btn
+              span
+                +img('checkbox-inner.svg')
+              span Israel
+            button(data-click-action='front:locationFilter' data-location='ukraine').checkbox-btn
+              span
+                +img('checkbox-inner.svg')
+              span Ukraine
+        .middle
+        .right
+          .locations-item.usa.ukraine
+            .row
+              h5.subtitle AWS Cloud Architect
+              span USA, Ukraine / Senior
+            p.text As an AWS Architect, you will be a Subject Matter Expert on diverse and challenging engagements at client sites. You will work with clients to build and architect new solutions, and migrate workloads into AWS.
+            a(href='./careers-inner.html').more More info
+            .bgc
+              +img('loc-bgc-blue.png')
+          .locations-item
+            .row
+              h5.subtitle Services Marketing and Business Growth Manager
+              span Remotely / Middle
+            p.text The candidate will be responsible for supporting and implementing the DevCube Professional Marketing strategy. We are looking for someone to work directly alongside the founders on a day-to-day basis from any place in the world.
+            a(href='./careers-inner.html').more More info
+            .bgc
+              +img('loc-bgc-green.png')
+          .locations-item.usa.ukraine
+            .row
+              h5.subtitle UX Designer
+              span USA, Ukraine / Senior
+            p.text This is a high-impact role. You will define go-to-market strategies, value proposition, messaging and execute PR activities for DevCube company
+            a(href='./careers-inner.html').more More info
+            .bgc
+              +img('loc-bgc-orange.png')

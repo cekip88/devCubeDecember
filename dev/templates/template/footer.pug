@@ -1,3 +1,36 @@
 footer.foot
-	.section
+	.section.foot-section
+		.col
+			a(href='./').foot-logo
+				+img('header_logo.svg')
+			p.text
+				strong DevCube
+				span USA - New Jersey Office
+				span 200 Craig Road
+				span Manalapan NJ 07726
+			a(href='mailto:info@mydevcube.com').link-blue info@mydevcube.com
+		.col
+			a(href='./').link Home
+			a(href='./services.html').link Services
+			a(href='./products.html').link Our products
+			a(href='./about.html').link About us
+			a(href='./careers.html').link Careers
+			a(href='./contact.html').link Contact us
+		.col
+			a(href='./').link Facebook
+			a(href='./').link LinkedIn
+			a(href='./').link UpWork
+			a(href='./').link Clutch
+		.col-last
+			.col.center
+				a(href='./')
+					+img('upwork-footer.svg')
+				span Upwork
+				span High Job Success
+			.col.center
+				a(href='./')
+					+img('clutch-footer.png')
+				span Top IT Services
+				span New Jersey 2021
+			span.foot-copy Copyright © 2021 DevCube. All Rights Reserved ®
 	+inc('js','front.js',false)(type="module")

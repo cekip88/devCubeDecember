@@ -1,0 +1,77 @@
+extends template/main
+append vars
+  -
+    page_title = 'Contact us'
+block content
+  main
+    section.welcome-bgc.fb.contact
+      .section
+        .bread-crumbs
+          a(href='./') Home /
+          span &nbsp;Contact us
+        .fb-inner
+          h1.subtitle Contact us
+          p.text We are here for you whether you are looking for answers or would like to speak to our sales team.
+          button(data-click-action='front:hireUs').button Hire us
+    section.contact
+      .section.row.contact-inner
+        .left
+          +img('undraw_newsletter_re_wrob 1.svg')
+          h5.subtitle-mini Have any questions?
+          h5.subtitle-mini Get in touch with us!
+          p.text We can be also reached via email:
+          a(href='mailto:info@mydevcube.com').link.link-blue info@mydevcube.com
+        .right
+          form.form
+            .row
+              .form-block
+                label Name
+                input(type='text' name='name' placeholder='Name')
+              .form-block
+                label Company Name
+                input(type='text' name='company Name' placeholder='Company Name')
+            .row
+              .form-block
+                label Email
+                input(type='text' name='mail' placeholder='youremail@mail.com')
+              .form-block
+                label Phone
+                input(type='text' name='phone' placeholder='+x (xxx) xxx xxxx')
+            .form-block
+              label Subject
+              input(type='text' name='subject' placeholder='Subject')
+            .form-block
+              label Message
+              textarea(name='subject' placeholder='Your message')
+            button.button Send
+          .bgc
+            +img('contact-bgc.png')
+    section.our.center
+      .section.our-section
+        h3.subtitle Our locations
+        .our-map
+          +img('map.svg')
+          .our-usa.our-place
+            .our-place-inner.our-usa-inner
+              h6.our-place-title United States
+              p.text
+                strong New Jersey Office
+                span 200 Craig Road
+                span Manalapan NJ 07726
+            +img('USA-bgc.svg')
+          .our-ukr.our-place
+            .our-place-inner.our-ukr-inner
+              h6.our-place-title Ukraine
+              p.text
+                strong Kiev Office
+                span Khreschatyk St, 22
+                span 02000
+            +img('ukr.svg')
+          .our-isr.our-place
+            .our-place-inner.our-isr-inner
+              h6.our-place-title Israel
+              p.text
+                strong Rehovot Office
+                span Eli Horovitz St 19,
+                span 7608802
+            +img('isr-bgc.svg')

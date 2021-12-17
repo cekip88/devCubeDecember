@@ -14,7 +14,7 @@ block content
 					.welcome-img
 						+img('main-bgc.svg')
 		section.we
-			.section.we-section
+			.section.row
 				.we-left
 					h3.subtitle We are DevCube
 					p.text Our lean approach allows us to offer very competitive pricing for our development services for entrepreneurs, small or large businesses, and people who have ideas awaiting digital partnership. Today we have over 50 clients in our portfolio, from startups to enterprise companies. We have worked with businesses from a wide scope of spheres, such as Ecommerce, IoT, Manufacturing and Logistics, InsureTech, Healthcare, Blockchain, and beyond.
@@ -33,7 +33,7 @@ block content
 		section.why.center
 			.section
 				h3.subtitle Why you should work with us
-				ul.why-list
+				ul.why-list.row
 					li.why-item
 						+img('why-item-1.svg')
 						.why-item-title On Shore & Off Shore Team
@@ -53,7 +53,7 @@ block content
 		section.cust.center
 			.section
 				h3.subtitle Our customers
-				ul.cust-list
+				ul.cust-list.row
 					li.cust-item
 						.cust-img
 							+img('kennedy-logo.png')
@@ -86,11 +86,132 @@ block content
 						.cust-img
 							+img('puff-logo.png')
 						span Database Optimization JavaScript PHP Amazon Web Services DevOps
-
-
-
-
-
+		section.how.center
+			.section
+				h3.subtitle How we act
+				input(type='radio' name='how' checked)#staff
+				input(type='radio' name='how')#new
+				.how-labels
+					button(data-click-action='front:changeHowItem' data-cls='0').active.how-label Staff augmentation
+					button(data-click-action='front:changeHowItem' data-cls='1').how-label New project
+				.how-row
+					ul(style='position:relative;z-index:1;').how-block.how-list.row.active
+						li.how-item
+							span.how-item-number 1
+							h5.how-item-title Contract
+							p.text We form demand based, friendly contract
+							+img('how-item-bgc.svg')
+						li.how-item
+							span.how-item-number 2
+							h5.how-item-title Your needs
+							p.text You tell us your staffing needs
+							+img('how-item-bgc.svg')
+						li.how-item
+							span.how-item-number 3
+							h5.how-item-title Best Fits
+							p.text We select the “Best Fit” candidates
+							+img('how-item-bgc.svg')
+						li.how-item
+							span.how-item-number 4
+							h5.how-item-title Your choice
+							p.text You interview and approve each candidate
+							+img('how-item-bgc.svg')
+						li.how-item
+							span.how-item-number 5
+							h5.how-item-title Augmentation
+							p.text We augment your staff with senior professionals
+							+img('how-item-bgc.svg')
+						li.how-item
+							span.how-item-number 6
+							h5.how-item-title Your needs
+							p.text Ramp Up or Down based on your needs
+							+img('how-item-bgc.svg')
+					ul.how-block.how-list.row
+						li.how-item
+							span.how-item-number 7
+							h5.how-item-title Contract
+							p.text We form demand based, friendly contract
+							+img('how-item-bgc.svg')
+						li.how-item
+							span.how-item-number 8
+							h5.how-item-title Your needs
+							p.text You tell us your staffing needs
+							+img('how-item-bgc.svg')
+						li.how-item
+							span.how-item-number 9
+							h5.how-item-title Best Fits
+							p.text We select the “Best Fit” candidates
+							+img('how-item-bgc.svg')
+						li.how-item
+							span.how-item-number 10
+							h5.how-item-title Your choice
+							p.text You interview and approve each candidate
+							+img('how-item-bgc.svg')
+						li.how-item
+							span.how-item-number 11
+							h5.how-item-title Augmentation
+							p.text We augment your staff with senior professionals
+							+img('how-item-bgc.svg')
+						li.how-item
+							span.how-item-number 12
+							h5.how-item-title Your needs
+							p.text Ramp Up or Down based on your needs
+							+img('how-item-bgc.svg')
+		section.our.center.our-index
+			.section.our-section
+				h3.subtitle Our locations
+				.our-map
+					+img('map.svg')
+					.our-usa.our-place
+						.our-place-inner.our-usa-inner
+							h6.our-place-title United States
+							p.text
+								strong New Jersey Office
+								span 200 Craig Road
+								span Manalapan NJ 07726
+						+img('USA-bgc.svg')
+					.our-ukr.our-place
+						.our-place-inner.our-ukr-inner
+							h6.our-place-title Ukraine
+							p.text
+								strong Kiev Office
+								span Khreschatyk St, 22
+								span 02000
+						+img('ukr.svg')
+					.our-isr.our-place
+						.our-place-inner.our-isr-inner
+							h6.our-place-title Israel
+							p.text
+								strong Rehovot Office
+								span Eli Horovitz St 19,
+								span 7608802
+						+img('isr-bgc.svg')
+		section.trust.center
+			.section
+				h3.subtitle We are trusted by Top Media
+				ul.trust-list
+					li.trust-item
+						+img('upwork.svg')
+					li.trust-item
+						+img('clutch.svg')
+					li.trust-item
+						+img('sortlist.svg')
+					li.trust-item
+						+img('g2.svg')
+					li.trust-item
+						+img('techreviewer.svg')
+					li.trust-item
+						+img('goodfirms.svg')
+				+img('image 1.jpg')
+		section.together
+			.section
+				.together-row.row
+					.together-left
+						h2.title Let's work together?
+						p.text Your one-stop to develop, integrate, and support your digital solutions ideas.
+						button.button Hire us
+					.together-right
+						+img('undraw_happy_announcement_re_tsm0 1.svg')
 
 
 

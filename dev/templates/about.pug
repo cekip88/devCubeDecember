@@ -1,0 +1,81 @@
+extends template/main
+append vars
+  -
+    page_title = 'About us'
+block content
+  main
+    section.welcome-bgc.fb
+      .section
+        .bread-crumbs
+          a(href='./') Home /
+          span &nbsp;About us
+        .fb-inner
+          h1.subtitle About us
+          p.text Your one-stop to develop, integrate, and support your digital solutions ideas.
+          button(data-click-action='front:hireUs').button Hire us
+    section.who
+      .section.row
+        .col
+          h3.subtitle Who are we?
+          p.text By 2021, DevCube has more than 20 years of software development experience, over 60 software professionals. Headquartered in New Jersey, USA, with offices in Israel and Ukraine. Our lean approach allows us to offer very competitive pricing for our development services for entrepreneurs, small or large businesses, and people who have ideas awaiting digital partnership. Today we have over 50 clients in our portfolio, from startups to enterprise companies. We have worked with businesses from a wide scope of spheres, such as
+            strong &nbsp;Ecommerce, IoT, Manufacturing and Logistics, InsureTech, Healthcare, Blockchain
+            | , and beyond.
+        .col.right
+          +img('header_logo.svg').who-logo
+          ul.who-list
+            li.who-item
+              +img('check-square 1.svg')
+              span 200+ projects completed
+            li.who-item
+              +img('users 1.svg')
+              span 60+ available developers
+            li.who-item
+              +img('clock 1.svg')
+              span years of experience
+            li.who-item
+              +img('home 1.svg')
+              span offices in USA, Israel & Ukraine
+            li.who-item
+              +img('crosshair 1.svg')
+              span wide scope of spheres
+    section.about
+      .section
+        .about-img
+          +img('who-photo.jpg')
+    section.pluses
+      .section
+        .row
+          .col.pluses-text
+            h3.subtitle Our approach
+            p.text We aim to provide full-cycle software solutions with quick product-to-market delivery. With our team spread across the globe, we break through any cultural and linguistic barriers to understand our customers from every part of the world.
+            p.text Your project will be accompanied by a leading expert with a 100% success rating on Upwork, and both the project budget and delivery estimate are guaranteed.
+          .col.pluses-img
+            +img('undraw_creative_team_r-90-h 1.svg')
+        .row
+          .col.pluses-img
+            +img('undraw_super_woman_dv-0-y 1.svg')
+          .col.pluses-text
+            h3.subtitle Our superpower
+            p.text Running multiple international projects, we understand how essential it is to win over the market with the best product while staying within the budget. We bring our knowledge and expertise from global enterprises and startup companies, leveraging international project management, research & development, customer success and delivery management skills.
+            p.text Our architects and developers are capable of any technology stack, including Cloud computing, DevOps, API integration , and production operations.
+    section.together
+      .section
+        .together-row
+          .together-left
+            h2.title Let's work together?
+            p.text Your one-stop to develop, integrate, and support your digital solutions ideas.
+            button.button Hire us
+          .together-right
+            +img('undraw_happy_announcement_re_tsm0 1.svg')
+
+
+
+
+
+
+
+
+
+
+
+

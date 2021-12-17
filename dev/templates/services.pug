@@ -1,0 +1,76 @@
+extends template/main
+append vars
+  -
+    page_title = 'Services'
+block content
+  main
+    section.welcome-bgc.fb
+      .section
+        .bread-crumbs
+          a(href='./') Home /
+          span &nbsp;Services
+        .fb-inner
+          h1.subtitle Services we provide
+          p.text Your one-stop to develop, integrate, and support your digital solutions ideas.
+          button(data-click-action='front:hireUs').button Hire us
+    section.services
+      .section.row
+        ul.services-list
+          li.services-item
+            +img('serv-item-1.svg')
+            h5.services-item-title Web and Mobile Applications
+            p.text We transform your ideas into intuitive, lightweight and easy-to-use mobile and web applications that keep potential customers focused on you and your product. We ensure everything works flawlessly across the devices regardless of their size and platform
+            .bgc
+              +img('serv-item-bgc-1.png')
+          li.services-item
+            +img('serv-item-3.svg')
+            h5.services-item-title E-commerce
+            p.text We build e-commerce websites that meet your goals, attract visitors, increase conversion rate, and generate sales. Shopify, WordPress, or custom e-commerce website — we will develop an engaging eStore that will present your customers with an intuitive and scalable shopping experience. We are experts in the latest cloud-based tools, platforms, and technologies, and we can take your e-commerce business to the next level
+            .bgc
+              +img('serv-item-bgc-3.png')
+          li.services-item
+            +img('serv-item-5.svg')
+            h5.services-item-title DevOps
+            p.text We make DevOps adoption easy to allow you to build and deliver software faster. Our DevOps certified experts and solutions help you achieve agile automation and deploy updates that respond to your business needs and development. We at DevCube have developed a unique and highly secure product that allows software engineers to create working environments from dev through testing and staging to production just in 7 minutes, as well as run CI/CD pipelines on their own infrastructure
+            .bgc
+              +img('serv-item-bgc-5.png')
+          li.services-item
+            +img('serv-item-7.svg')
+            h5.services-item-title IoT
+            p.text DevCube is a one-stop IoT vendor with a full range of services to help your business work out reliable and cost- effective ways to address your business challenges. We develop IoT as a solution to the management of personal devices at home and devices at work enabled with seamless connectivity using the software, sensors, and actuators
+            .bgc
+              +img('serv-item-bgc-7.png')
+        ul.services-list
+          li.services-item
+            +img('serv-item-2.svg')
+            h5.services-item-title API
+            p.text DevCube has a wealth of experience in API development and integration as well as in related areas like creating complex SaaS solutions, all this together with web and mobile applications. We offer microservices API integration solutions that integrate with your entire operations infrastructure
+            .bgc
+              +img('serv-item-bgc-2.png')
+          li.services-item
+            +img('serv-item-4.svg')
+            h5.services-item-title Microservices
+            p.text We break up your monolithic system into microservices while ensuring that each step of migration represents an atomic improvement to the overall architecture
+            .bgc
+              +img('serv-item-bgc-4.png')
+          li.services-item
+            +img('serv-item-6.svg')
+            h5.services-item-title Cloud Migration
+            p.text We provide you with safe, seamless, and rapid migration of your workloads to the cloud platforms. Using AWS, we move your applications, servers, and databases to a cloud environment while ensuring security, scalability, flexibility, and cost savings
+            .bgc
+              +img('serv-item-bgc-6.png')
+          li.services-item
+            +img('serv-item-8.svg')
+            h5.services-item-title Test Automation
+            p.text The DevCube Automation team is proficient across various test automation frameworks in all major programming languages like Java, Groovy, Ruby, C-Sharp, JavaScript and Python. With open source tools available in the market, we are able to offer the best E2E automated testing to our Clients.
+            .bgc
+              +img('serv-item-bgc-8.png')
+    section.together
+      .section
+        .together-row
+          .together-left
+            h2.title Let's work together?
+            p.text Your one-stop to develop, integrate, and support your digital solutions ideas.
+            button.button Hire us
+          .together-right
+            +img('undraw_happy_announcement_re_tsm0 1.svg')
