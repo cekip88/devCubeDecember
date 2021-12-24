@@ -1,3 +1,5 @@
+html
+	scroll-behavior: smooth
 .section
 	+w(100%)
 	padding: 0 10px
@@ -112,7 +114,6 @@
 	&-inner
 		margin: auto 0
 		.text
-			max-width: 325px
 			margin: 40px 0 50px
 .fb,.welcome
 	&-bgc
@@ -287,11 +288,28 @@
 	padding: 50px 0
 	&-list
 		@extend %dfa
-		padding: 50px 0
+		padding: 50px 0 0
 		flex-direction: column
 	&-item
-		margin-bottom: 10px
-
+		@extend %dfc
+		margin-bottom: 40px
+		flex-direction: column
+		&:last-child
+			margin-bottom: 0
+		a
+			display: block
+			img,svg
+				width: 200px
+				display: block
+		span
+			padding-top: 10px
+			font-size: 16px
+			color: #F27407
+			line-height: 1.4
+			text-align: center
+.best-startup
+	padding: 10px
+	background-color: #b22234
 .together
 	padding: 50px 0 0
 	background: linear-gradient(71.32deg, #04005E 14.76%, #0B0676 24.92%, #130D96 41.25%, #1A13AC 57.06%, #1E16BA 71.94%, #1F17BF 84.94%)
@@ -426,13 +444,13 @@
 			margin: 6px 0 20px
 
 .contact
-	.fb-inner
-		.text
-			max-width: 410px
 	.right
 		margin-top: 20px
 		padding: 30px
 		position: relative
+#contact
+	margin-top: -100px
+	padding-top: 100px
 .form
 	.button
 		width: 100%

@@ -7,7 +7,6 @@ class Front extends _front{
     MainEventBus
       .on(_,'burgerClick')
       .on(_,'changeHowItem')
-      .on(_,'hireUs')
       .on(_,'locationFilter')
       .on(_,'createOrderSuccess')
       .on(_,'createOrderFail');
@@ -69,10 +68,6 @@ class Front extends _front{
       head.classList.add('active');
       document.body.style = 'overflow:hidden;'
     }
-  }
-  hireUs(clickData){
-    const _ = this;
-    console.log(clickData)
   }
 
   locationFilter(clickData){

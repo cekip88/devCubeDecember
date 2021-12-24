@@ -105,7 +105,7 @@
 	&-img
 		height: 100px
 		display: flex
-		align-items: flex-end
+		align-items: center
 
 .how
 	margin-top: -50px
@@ -134,7 +134,10 @@
 .our
 	padding-bottom: 100px
 	&-map
+		+dfc
 		margin-top: 50px
+		&>img
+			max-width: 70%
 	&-place
 		padding-top: 0
 		display: flex
@@ -148,28 +151,30 @@
 			position: absolute
 			&,.text
 				color: $white
+		img
+			max-width: 80%
 	&-usa
-		top: 48px
-		left: -87px
+		top: 8px
+		left: -15px
 		&:after
 			top: initial
 			left: initial
 			bottom: -3px
-			right: -3px
+			right: 23px
 	&-ukr
-		top: 45px
-		right: 100px
+		top: 17px
+		right: 128px
 		&:after
 			top: initial
-			left: -3px
+			left: 17px
 			bottom: -3px
 			right: initial
 	&-isr
-		bottom: 18px
-		right: 100px
+		bottom: -8px
+		right: 133px
 		&:after
 			top: -3px
-			left: -3px
+			left: 17px
 			bottom: initial
 			right: initial
 
@@ -180,14 +185,13 @@
 		+af
 		+wh(200%)
 	&-list
-		width: 700px
 		flex-direction: row
 		justify-content: center
-		flex-wrap: wrap
 	&-item
-		margin-right: 70px
-		&:nth-child(4),&:last-child
-			margin-right: 0
+		flex: 0 0 200px
+		margin-bottom: 0
+		&:nth-child(2)
+			margin: 0 80px
 
 .together
 	&-row
@@ -197,6 +201,8 @@
 		width: 325px
 		margin-bottom: 0
 		padding-top: 20px
+	&-right
+		max-width: 500px
 
 .services
 	.row
@@ -204,10 +210,10 @@
 		align-items: flex-start
 	&-list
 		width: calc(50% - 15px)
+		padding-top: 0
 	&-item
 		margin-bottom: 30px
 		padding: 50px 30px
-
 .power
 	img
 		width: 300px
@@ -236,7 +242,11 @@
 .locations
 	padding: 30px 0
 	.left
+		.col,.locations-title
+			position: sticky
+			top: 100px
 		.col
+			top: 130px
 			flex-direction: column
 			align-items: flex-start
 	.right
@@ -245,16 +255,8 @@
 		align-items: stretch
 	&-item
 		padding: 37px 53px
-		.row
-			align-items: flex-end
-			justify-content: flex-start
-			.subtitle
-				margin-right: 13px
-				font-size: 24px
-				line-height: 45.6px
-			span
-				font-size: 16px
-				line-height: 37.4px
+		.subtitle
+			font-size: 24px
 	.middle
 		width: 1px
 		margin: 0 30px
@@ -280,19 +282,16 @@
 	&-section
 		flex-wrap: nowrap
 		justify-content: space-between
+		position: relative
 		&>.col
-			margin-right: 25px
 			&:first-child
 				width: initial
 	&-logo
 		align-self: initial
 	.col
 		margin-bottom: 0
-		align-items: flex-start
 		flex-shrink: 0
 		flex-grow: 0
-		&:nth-child(3)
-			text-align: left
 		&-last
 			width: 250px
 			justify-content: flex-end
@@ -304,7 +303,11 @@
 		&:last-child
 			margin-bottom: 0
 	&-copy
+		width: 200px
+		position: absolute
 		text-align: right
+		bottom: 0
+		right: 0
 
 
 
