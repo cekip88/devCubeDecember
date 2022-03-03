@@ -8,11 +8,51 @@ class Front extends _front{
       .on(_,'burgerClick')
       .on(_,'changeHowItem')
       .on(_,'locationFilter')
+      .on(_,'prevReview')
+      .on(_,'nextReview')
       .on(_,'createOrderSuccess')
       .on(_,'createOrderFail');
   }
   createOrderSuccess(orderData){}
   createOrderFail(orderData){}
+
+  prevReview(clickData){
+    let btn = clickData.item;
+    if (btn.hasAttribute('disabled')) return;
+    let
+      slider = btn.closest('.slider'),
+      slides = slider.querySelector('.slides'),
+      position = parseInt(slider.getAttribute('data-position'));
+
+    position--;
+    slides.querySelectorAll('.slide').forEach(function (slide){
+      slide.style = `transform:translateX(-${position * 100}%)`;
+    })
+    slider.setAttribute('data-position',position)
+
+    if (position === 0) {
+      console.log(position,btn)
+      btn.setAttribute('disabled',true);
+    }
+    if (position < slides.children.length - 1) slider.querySelector('.slider-next').removeAttribute('disabled');
+  }
+  nextReview(clickData){
+    let btn = clickData.item;
+    if (btn.hasAttribute('disabled')) return;
+    let
+      slider = btn.closest('.slider'),
+      slides = slider.querySelector('.slides'),
+      position = parseInt(slider.getAttribute('data-position'));
+
+    position++;
+    slides.querySelectorAll('.slide').forEach(function (slide){
+      slide.style = `transform:translateX(-${position * 100}%)`;
+    })
+    slider.setAttribute('data-position',position)
+
+    if (position === slides.children.length - 1) btn.setAttribute('disabled',true);
+    if (position !== 0) slider.querySelector('.slider-prev').removeAttribute('disabled');
+  }
 
   changeHowItem(clickData){
     const _ = this;
@@ -86,10 +126,29 @@ class Front extends _front{
     }
   }
 
+  rotateDegree(unit){
+    let p = parseInt(unit.querySelector('.diagram-inner').textContent);
+
+    let deg = Math.round(3.6*p);
+
+    if (deg <= 180 && deg > 0) {
+      unit.querySelector(".pieSlice1 .pie").style = "transform:rotate(" + deg + "deg)";
+      unit.querySelector(".object.rotate").style = "transform:rotate(" + deg + "deg)";
+    } else if (deg > 180 && deg <= 360) {
+      unit.querySelector(".pieSlice1 .pie").style = "transform:rotate(180deg)";
+      unit.querySelector(".pieSlice2 .pie").style = "transform:rotate(" + (deg - 180) + "deg)";
+      unit.querySelector(".object.rotate").style = "transform:rotate(" + deg + "deg)";
+    }
+  }
+
   init(){
     const _ = this;
     _.headScroll();
     _.checkActivePage();
+    let diagrams = document.querySelectorAll('.diagram');
+    diagrams.forEach(function (diagram){
+      _.rotateDegree(diagram);
+    })
   }
 }
 new Front();

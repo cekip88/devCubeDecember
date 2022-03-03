@@ -68,9 +68,14 @@ html
 	&,&-mini
 		font-size: 24px
 .button
-	padding: 10px 30px 12px
 	background-color: $orange
 	color: $white
+	&,&-reverse
+		padding: 10px 30px 12px
+		display: inline-block
+	&-reverse
+		color: $orange
+		border: 1px solid $orange
 .text,.link
 	color: #4F4D8E
 .link
@@ -84,6 +89,7 @@ html
 	.subtitle
 		text-align: center
 .bread-crumbs
+	margin-bottom: 20px
 	a
 		opacity: .32
 	span
@@ -106,15 +112,20 @@ html
 		img
 			display: block
 .fb
-	padding: 49px 0
+	margin-top: 49px
+	padding: 0 0 49px
 	.section
 		height: calc(100vh - 98px)
+	.section,.row
 		@extend %df
 		flex-direction: column
 	&-inner
 		margin: auto 0
+		order: 2
 		.text
 			margin: 40px 0 50px
+	&.green
+		background-color: #F5FBF3
 .fb,.welcome
 	&-bgc
 		background: url(img/welcome-bgc.svg) no-repeat 100%, linear-gradient(81.1deg, #F8FDFF 0%, #F9FDFF 100%)
@@ -510,8 +521,269 @@ html
 		color: rgba(#04005E,.3)
 		text-align: center
 
+.transparent-text
+	opacity: .6
+.steps
+	padding: 40px 0 20px
+	&-title
+		margin-top: -8px
+		margin-bottom: -10px
+	&-text
+		position: absolute
+		span
+			font-size: 12px
+	&-item
+		@extend %dfc
+		margin-bottom: -40px
+		position: relative
+		color: #4F4D8E
+		&:last-child
+			margin-bottom: 0
+			color: #fff
+			span
+				opacity: 1
+		img
+			display: block
 
 
+.audit
+	&-list
+		display: flex
+		flex-direction: column
+	&-item
+		padding: 20px 10px
+		margin-bottom: 10px
+		box-shadow: 0 0 5px rgba(#000,.2)
+		svg
+			display: none
+	&-inner
+		display: flex
+		flex-direction: column
+		align-items: center
+		strong
+			margin-top: 20px
+			font-weight: 600
+			font-size: 2.57em
+			line-height: 1.2
+		.button-reverse
+			margin-top: 5px
+
+
+.guarant
+	padding-bottom: 40px
+	&-list
+		margin-top: 20px
+	&-item
+		margin-bottom: 20px
+		display: flex
+		flex-direction: column
+		align-items: center
+	&-text
+		display: flex
+		flex-direction: column
+		text-align: center
+		color: $blue-dark
+		h6
+			margin-bottom: 6px
+			font-size: 19px
+			font-weight: 700
+			line-height: 1.2
+		span
+			opacity: .6
+			line-height: 1.2
+			font-weight: 300
+
+.serv
+	padding-bottom: 40px
+	&-list
+		padding-top: 40px
+	&-item
+		padding: 20px
+		margin-bottom: 20px
+		&:first-child
+			background-color: #FEFBF2
+		&:nth-child(2)
+			background-color: #FEF8F2
+		&:nth-child(3)
+			background-color: #FEF2FE
+		&:nth-child(4)
+			margin-bottom: 0
+			background-color: #F2FBFE
+		&-title
+			margin-bottom: 6px
+			font-size: 19px
+			font-weight: 700
+		&-img
+			margin-top: 20px
+		.button
+			margin-top: 36px
+
+
+.diagram
+	+wh(100px)
+	+dfc
+	float: left
+	position: relative
+	&-inner
+		font-size: 24px
+		font-weight: 700
+		color: #4F4D8E
+		position: absolute
+		z-index: 101
+
+.pieBackground
+	+wh(100%)
+	+dfc
+	background-color: #d5d8df
+	border-radius: 100%
+	position: absolute
+
+.pieField
+	+wh(calc(100% - 34px))
+	background-color: #fff
+	border-radius: 100%
+	position: absolute
+	z-index: 100
+.wrapper
+	+wh(100%)
+.object
+	position: absolute
+	z-index: 200
+	width: 5px
+	height: 100%
+	background-color: transparent
+	-webkit-border-radius: 3px
+	border-radius: 3px
+	left: 87.5px
+
+.round
+	position: absolute
+	z-index: 1000
+	width: 5px
+	height: 5px
+	-webkit-border-radius: 3px
+	border-radius: 3px
+
+.hold
+	+wh(100%)
+	border-radius: 100%
+	position: absolute
+	clip: rect(0,100px,100px,50px)
+
+.pie
+	+wh(100%)
+	border-radius: 100%
+	background-color: rgba(#4F4D8E,.8)
+	position: absolute
+	clip: rect(0,50px,100px,0)
+
+
+.pieSlice2
+	-webkit-transform: rotate(180deg)
+	-moz-transform: rotate(180deg)
+	-o-transform: rotate(180deg)
+	-ms-transform: rotate(180deg)
+	transform: rotate(180deg)
+
+
+
+.cases
+	padding-bottom: 40px
+	&-list
+		padding-top: 20px
+		display: flex
+		flex-wrap: wrap
+	&-item
+		flex: 0 0 50%
+		margin-bottom: 20px
+		display: flex
+		flex-direction: column
+		align-items: center
+	&-text
+		padding-top: 20px
+		display: flex
+		align-items: center
+		flex-direction: column
+		text-align: center
+		span
+			line-height: 1.2
+			font-size: 12px
+	&-date
+		font-weight: 700
+		font-size: 18px
+	&-title
+		font-size: 24px
+		font-weight: 700
+.cases,.serv,.steps,.audit,.guarant,.review
+	font-size: 14px
+
+.slider
+	&-button
+		+dfc
+		+wh(40px)
+		position: absolute
+		z-index: 1
+		top: 50%
+		transform: translateY(-50%)
+		&[disabled]
+			img
+				opacity: .2
+	&-prev
+		left: 10px
+	&-next
+		right: 10px
+
+.review
+	padding-bottom: 40px
+	.section
+		position: relative
+	.slider
+		width: 100%
+		margin-top: 20px
+		.section
+			padding: 0 50px
+		&-button
+			box-shadow: 0 4px 4px rgba(0,0,0,.25)
+			border-radius: 100%
+			background-color: #fff
+	.slides
+		display: flex
+		align-items: center
+		overflow: hidden
+	.slide
+		flex: 0 0 100%
+		display: flex
+		flex-direction: column
+		align-items: center
+		transition: .35s ease
+	&-photo
+		+wh(120px)
+		border-radius: 100%
+		overflow: hidden
+		img
+			+wh(100%)
+			object-fit: cover
+	&-name
+		margin-bottom: 4px
+		font-weight: 700
+		color: #4F4D8E
+	&-text
+		margin: 10px 0
+		line-height: 1.4
+		font-size: 16px
+		text-align: center
+	&-date
+		margin-bottom: 4px
+	&-site
+		text-transform: lowercase
+		color: #4F4D8E
+		position: relative
+		&:after
+			+af
+			+wh(100%,1px)
+			background-color: #4F4D8E
+			position: absolute
+			bottom: 2px
 
 
 

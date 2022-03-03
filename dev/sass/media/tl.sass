@@ -1,10 +1,13 @@
 .section
 	+w(960px)
-
 .head
 	&-nav,.link
 		margin-right: 60px
 
+.fb
+	&-img
+		flex-shrink: 0
+		flex-grow: 0
 .welcome
 	padding-bottom: 110px
 	&-img
@@ -140,9 +143,71 @@
 		text-align: left
 
 
+.steps
+	&-list
+		flex-wrap: nowrap
+	&-item
+		flex-basis: 25%
+		margin-bottom: 0
+		img
+			max-width: 122%
+			width: 122%
 
 
+.audit
+	&-item
+		flex-basis: calc(100% / 3)
+		padding: 30px 0
+		margin: 0
+		display: flex
+		align-items: center
+		justify-content: center
+		box-shadow: none
+		position: relative
+		svg
+			width: 110%
+			height: auto
+			display: block
+			position: absolute
+			z-index: -1
+	&-title
+		margin-top: 40px
+	&-inner
+		span
+			margin-top: 20px
+		&-img
+			+wh(64px)
+			+dfc
+			background-color: #fff
+			border-radius: 100%
+			box-shadow: 0 4px 35px rgba(0,0,0,.1)
+			img
+				display: block
 
 
+.guarant
+	&-item
+		flex-direction: row
+		align-items: center
+	&-img
+		flex: 0 0 72px
+		margin-bottom: 0
+		margin-right: 27px
+	&-text
+		text-align: left
 
+.serv
+	&-list
+		padding-top: 73px
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+	&-item
+		flex: 0 0 calc((100% - 20px) / 2)
+		padding: 65px 40px
+		&:nth-child(3)
+			margin-bottom: 0
 
+.cases
+	&-list
+		padding-top: 50px

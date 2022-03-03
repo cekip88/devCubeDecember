@@ -47,17 +47,27 @@
 		position: static
 
 .fb
-	padding: 100px 0 92px
+	margin-top: 63px
+	padding: 37px 0 92px
 	.section
 		height: initial
-
+	.row
+		flex-direction: row
+		align-items: center
+	&-inner
+		width: 100%
+		order: initial
+	&-img
+		margin-left: 100px
+		img
+			+wh(100%)
+			display: block
+			object-fit: cover
 .fb,.welcome
 	&-inner
 		.text
 			margin: 20px 0 36px
 
-.bread-crumbs
-	margin-bottom: 20px
 .we
 	.row
 		align-items: flex-end
@@ -310,4 +320,59 @@
 		right: 0
 
 
+.steps
+	padding: 80px 0 60px
+	&-list
+		display: flex
+		align-items: center
+		flex-wrap: wrap
+	&-item
+		flex: 0 0 50%
+		&:nth-child(3)
+			margin-bottom: 0
 
+
+.audit
+	padding-bottom: 60px
+	&-list
+		margin-top: 20px
+		flex-direction: row
+		justify-content: space-between
+	&-item
+		flex: 0 0 30%
+
+.guarant
+	padding-bottom: 60px
+	&-list
+		display: flex
+		align-items: flex-start
+	&-item
+		padding: 0 20px
+	&-img
+		+wh(72px)
+		+dfc
+		margin-bottom: 20px
+		border-radius: 15px 5px 15px 5px
+		box-shadow: 0 4px 35px rgba(0,0,0,.1)
+
+.serv
+	padding-bottom: 50px
+	&-list
+		padding-top: 50px
+	&-item
+		&-row
+			display: flex
+			align-items: center
+		&-img
+			flex-shrink: 0
+			flex-grow: 0
+			margin-top: 0
+			margin-left: 38px
+
+.cases
+	padding-bottom: 80px
+	&-item
+		flex-basis: calc(100% / 3)
+
+.review
+	padding-bottom: 60px

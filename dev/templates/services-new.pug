@@ -1,0 +1,284 @@
+extends template/main
+append vars
+  -
+    page_title = 'Services'
+block content
+  main
+    section.fb.green
+      .section
+        .bread-crumbs
+          a(href='./') Home /
+          a(href='./') &nbsp;Services /
+          span &nbsp;Web and Mobile Applications
+        .row
+          .fb-inner
+            h1.subtitle Web and Mobile Applications
+            p.text We transform your ideas into intuitive, lightweight and easy-to-use mobile and web applications that keep potential customers focused on you and your product. We ensure everything works flawlessly across the devices regardless of their size and platform.
+            a(href='./contact.html#contact').button Hire us
+          .fb-img
+            +img('mobile-app-bgc.png')
+    section.steps
+      .section
+        h5.subtitle How it works
+        ul.steps-list
+          li.steps-item
+            .steps-text
+              h6.steps-title First step
+              span.transparent-text Short step description
+            +img('step-start.svg')
+          li.steps-item
+            .steps-text
+              h6.steps-title Second step
+              span.transparent-text Short step description
+            +img('steps.svg')
+          li.steps-item
+            .steps-text
+              h6.steps-title Third step
+              span.transparent-text Short step description
+            +img('steps.svg')
+          li.steps-item
+            .steps-text
+              h6.steps-title The final
+              span Short step description
+            +img('step-end.svg')
+    section.audit
+      .section
+        h5.subtitle Audience description
+        ul.audit-list
+          li.audit-item
+            include ../img/audit-bgc-1.svg
+            .audit-inner
+              .audit-inner-img
+                +img('audit-star.png')
+              h6.audit-title Title
+              span Pain points
+              span Desires
+              span Solution
+              strong Result
+              a(href='/contact.html#contact').button-reverse HIRE US
+          li.audit-item
+            include ../img/audit-bgc-2.svg
+            .audit-inner
+              .audit-inner-img
+                +img('audit-star.png')
+              h6.audit-title Title
+              span Pain points
+              span Desires
+              span Solution
+              strong Result
+              a(href='/contact.html#contact').button-reverse HIRE US
+          li.audit-item
+            include ../img/audit-bgc-3.svg
+            .audit-inner
+              .audit-inner-img
+                +img('audit-star.png')
+              h6.audit-title Title
+              span Pain points
+              span Desires
+              span Solution
+              strong Result
+              a(href='/contact.html#contact').button-reverse HIRE US
+    section.guarant
+      .section
+        h5.subtitle Result guarantee
+        ul.guarant-list
+          li.guarant-item
+            .guarant-img
+              include ../img/guarant-dollar.svg
+            .guarant-text
+              h6 Return of funds
+              span.transparent-text A small description of the item, lorem ipsum so to speak
+          li.guarant-item
+            .guarant-img
+              include ../img/guarant-bell.svg
+            .guarant-text
+              h6 Milestone Alerts
+              span.transparent-text A small description of the item, lorem ipsum so to speak
+          li.guarant-item
+            .guarant-img
+              include ../img/guarant-case.svg
+            .guarant-text
+              h6 Closing documents
+              span.transparent-text A small description of the item, lorem ipsum so to speak
+    section.cases
+      .slider
+        .section
+          button(data-click-action='front:prevCase').slider-button.slider-prev
+            +img('slider-arrow-prev.svg')
+          button(data-click-action='front:prevCase').slider-button.slider-next
+            +img('slider-arrow-next.svg')
+        .slides
+          .slide.section
+            .cases-left
+              .cases-date 21.01.2021
+              .cases-title INTER INSURANCE
+              .cases-desc A small description of the item, lorem ipsum so to speak. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae erat dui.
+              .cases-link www.INTERINSURANCE.com
+            .cases-right
+              +img('cases-slide-img.png')
+    section.cases
+      .section
+        h5.subtitle Cases in numbers
+        ul.cases-list
+          li.cases-item
+            .diagram
+              .pieBackground
+                .pieField
+              .wrapper
+                .object
+                  .round
+                .object.rotate
+                  .round
+                .pieSlice1.hold
+                  .pie
+                .pieSlice2.hold
+                  .pie
+              .diagram-inner 75
+            .cases-text
+              h6 Title
+              span.transparent-text Short step description
+          li.cases-item
+            .diagram
+              .pieBackground
+                .pieField
+              .wrapper
+                .object
+                  .round
+                .object.rotate
+                  .round
+                .pieSlice1.hold
+                  .pie
+                .pieSlice2.hold
+                  .pie
+              .diagram-inner 15
+            .cases-text
+              h6 Title
+              span.transparent-text Short step description
+          li.cases-item
+            .diagram
+              .pieBackground
+                .pieField
+              .wrapper
+                .object
+                  .round
+                .object.rotate
+                  .round
+                .pieSlice1.hold
+                  .pie
+                .pieSlice2.hold
+                  .pie
+              .diagram-inner 60
+            .cases-text
+              h6 Title
+              span.transparent-text Short step description
+          li.cases-item
+            .diagram
+              .pieBackground
+                .pieField
+              .wrapper
+                .object
+                  .round
+                .object.rotate
+                  .round
+                .pieSlice1.hold
+                  .pie
+                .pieSlice2.hold
+                  .pie
+              .diagram-inner 90
+            .cases-text
+              h6 Title
+              span.transparent-text Short step description
+          li.cases-item
+            .diagram
+              .pieBackground
+                .pieField
+              .wrapper
+                .object
+                  .round
+                .object.rotate
+                  .round
+                .pieSlice1.hold
+                  .pie
+                .pieSlice2.hold
+                  .pie
+              .diagram-inner 12
+            .cases-text
+              h6 Title
+              span.transparent-text Short step description
+          li.cases-item
+            .diagram
+              .pieBackground
+                .pieField
+              .wrapper
+                .object
+                  .round
+                .object.rotate
+                  .round
+                .pieSlice1.hold
+                  .pie
+                .pieSlice2.hold
+                  .pie
+              .diagram-inner 45
+            .cases-text
+              h6 Title
+              span.transparent-text Short step description
+    section.review
+      .section
+        h5.subtitle Testimonials
+      .slider(data-position=0)
+        .section
+          button.slider-button.slider-prev(data-click-action='front:prevReview' disabled)
+            +img('slider-arrow-prev.svg')
+          .slides
+            -for (let i = 0; i < 5; i++)
+              .slide
+                .review-photo
+                  +img('review-photo.jpg')
+                .review-name Bogdan Dranchuk
+                .review-position.transparent-text CEO of Inter Insurence
+                p.review-text.transparent-text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                .review-date.transparent-text 10.02.2021
+                a(href='#').review-site www.INTERINSURANCE.com
+          button.slider-button.slider-next(data-click-action='front:nextReview')
+            +img('slider-arrow-next.svg')
+    section.serv
+      .section
+        h5.subtitle More services
+        ul.serv-list
+          li.serv-item
+            h6.serv-item-title API
+            .serv-item-row
+              p.serv-item-text.transparent-text DevCube has a wealth of experience in API development and integration as well as in related areas like creating complex SaaS solutions, all this together with web and mobile applications. We offer microservices API integration solutions that integrate with your entire operations infrastructure.
+              .serv-item-img
+                +img('serv-api.svg')
+            a(href='/contact.html#contact').button HIRE US
+          li.serv-item
+            h6.serv-item-title E-commerce
+            .serv-item-row
+              p.serv-item-text.transparent-text We build e-commerce websites that meet your goals, attract visitors, increase conversion rate, and generate sales. Shopify, WordPress, or custom e-commerce website — we will develop an engaging eStore that will present your customers with an intuitive and scalable shopping experience.
+              .serv-item-img
+                +img('serv-ecom.svg')
+            a(href='/contact.html#contact').button HIRE US
+          li.serv-item
+            h6.serv-item-title E-commerce
+            .serv-item-row
+              p.serv-item-text.transparent-text We build e-commerce websites that meet your goals, attract visitors, increase conversion rate, and generate sales. Shopify, WordPress, or custom e-commerce website — we will develop an engaging eStore that will present your customers with an intuitive and scalable shopping experience.
+              .serv-item-img
+                +img('serv-ecom.svg')
+            a(href='/contact.html#contact').button HIRE US
+          li.serv-item
+            h6.serv-item-title API
+            .serv-item-row
+              p.serv-item-text.transparent-text DevCube has a wealth of experience in API development and integration as well as in related areas like creating complex SaaS solutions, all this together with web and mobile applications. We offer microservices API integration solutions that integrate with your entire operations infrastructure.
+              .serv-item-img
+                +img('serv-api.svg')
+            a(href='/contact.html#contact').button HIRE US
+    section.together
+      .section
+        .together-row.row
+          .together-left
+            h2.title Let's work together?
+            p.text Your one-stop to develop, integrate, and support your digital solutions ideas.
+            a(href='./contact.html#contact').button Hire us
+          .together-right
+            +img('undraw_happy_announcement_re_tsm0 1.svg')

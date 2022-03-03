@@ -4,7 +4,7 @@ body
 	font-size: 16px
 
 .section
-	+w(1100px)
+	+w(1170px)
 
 .head
 	&-button
@@ -17,12 +17,18 @@ body
 	font-size: 50px
 .subtitle
 	font-size: 32px
+	font-weight: 700
 .button
-	@extend %trd
 	border: 1px solid $orange
+	&,&-reverse
+		@extend %trd
 	&:hover
 		background-color: transparent
 		color: $orange
+	&-reverse
+		&:hover
+			background-color: $orange
+			color: #fff
 .link
 	position: relative
 	&:after
@@ -47,7 +53,10 @@ body
 		transform: translate(-80px,124px)
 
 .fb
-	padding-top: 121px
+	margin-top: 66px
+	padding-top: 55px
+	&-img
+		margin-left: 241px
 .fb,.welcome
 	&-inner
 		.text
@@ -207,6 +216,65 @@ body
 	&-copy
 		width: initial
 
+
+.steps
+	padding: 112px 0 80px
+	&-list
+		margin-top: 40px
+	&-text
+		width: calc(100% - 88px)
+
+
+.audit
+	padding-bottom: 104px
+	&-list
+		margin-top: 80px
+	&-inner
+		.button-reverse
+			margin-top: 50px
+
+
+.guarant
+	padding-bottom: 112px
+	&-list
+		margin-top: 73px
+		justify-content: space-between
+	&-item
+		padding: 0
+	&-text
+		width: 228px
+
+
+.serv
+	padding-bottom: 120px
+
+.cases
+	padding-bottom: 129px
+	&-list
+		padding-top: 82px
+	&-item
+		flex-basis: calc(100% / 6)
+		margin-bottom: 0
+	&-text
+		padding-top: 49px
+
+
+.diagram
+	+wh(150px)
+	&-inner
+		font-size: 32px
+.hold
+	clip: rect(0,150px,150px,75px)
+.pie
+	clip: rect(0,75px,150px,0)
+
+.review
+	padding-bottom: 112px
+	.slider
+		margin-top: 73px
+		box-shadow: 0 4px 35px rgba(0, 0, 0, 0.1)
+	.slide
+		padding: 71px 125px 92px
 
 
 
