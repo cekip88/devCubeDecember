@@ -10,11 +10,28 @@ class Front extends _front{
       .on(_,'locationFilter')
       .on(_,'prevReview')
       .on(_,'nextReview')
+      .on(_,'prevCase')
+      .on(_,'nextCase')
       .on(_,'createOrderSuccess')
       .on(_,'createOrderFail');
   }
   createOrderSuccess(orderData){}
   createOrderFail(orderData){}
+
+  prevCase(clickData){
+    let
+      btn = clickData.item,
+      slider = btn.closest('.slider'),
+      slides = slider.querySelector('.slides');
+    slides.prepend(slides.lastElementChild);
+  }
+  nextCase(clickData){
+    let
+      btn = clickData.item,
+      slider = btn.closest('.slider'),
+      slides = slider.querySelector('.slides');
+    slides.append(slides.firstElementChild);
+  }
 
   prevReview(clickData){
     let btn = clickData.item;

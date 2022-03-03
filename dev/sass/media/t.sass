@@ -373,6 +373,29 @@
 	padding-bottom: 80px
 	&-item
 		flex-basis: calc(100% / 3)
+	.slider
+		.section
+			position: absolute
+			left: 0
+			right: 0
+			top: 50%
+	.slides
+		padding: 40px 0
+	.slide
+		width: 720px
+		flex-basis: 720px
+		padding: 50px
+		margin: 0 calc((100% - 720px) / 2)
+		align-items: center
+		box-shadow: 0 4px 35px rgba(0,0,0,.1)
+		border-radius: 15px
+		flex-direction: row
+		&:first-child
+			margin-left: calc((((100% - 720px) / 2) + 720px) * -1)
+	&-left
+		margin-right: 20px
+		padding-bottom: 34px
+		order: initial
 
 .review
 	padding-bottom: 60px

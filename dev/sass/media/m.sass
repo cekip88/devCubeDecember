@@ -686,6 +686,18 @@ html
 	transform: rotate(180deg)
 
 
+.low-link
+	display: inline-block
+	text-transform: lowercase
+	color: #4F4D8E
+	position: relative
+	&:after
+		+af
+		+wh(100%,1px)
+		background-color: #4F4D8E
+		position: absolute
+		bottom: 2px
+
 
 .cases
 	padding-bottom: 40px
@@ -708,12 +720,31 @@ html
 		span
 			line-height: 1.2
 			font-size: 12px
+	&-left
+		color: #4F4D8E
+		order: 2
 	&-date
 		font-weight: 700
 		font-size: 18px
 	&-title
 		font-size: 24px
 		font-weight: 700
+	&-right
+		margin-top: 20px
+	.slider
+		position: relative
+	.slides
+		display: flex
+		align-items: center
+		overflow: hidden
+	.slide
+		flex: 0 0 100%
+		padding: 0 50px
+		display: flex
+		flex-direction: column
+		transition: .35s ease
+		&:first-child
+			margin-left: -100%
 .cases,.serv,.steps,.audit,.guarant,.review
 	font-size: 14px
 
@@ -774,17 +805,6 @@ html
 		text-align: center
 	&-date
 		margin-bottom: 4px
-	&-site
-		text-transform: lowercase
-		color: #4F4D8E
-		position: relative
-		&:after
-			+af
-			+wh(100%,1px)
-			background-color: #4F4D8E
-			position: absolute
-			bottom: 2px
-
 
 
 

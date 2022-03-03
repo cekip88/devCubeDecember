@@ -101,21 +101,24 @@ block content
               h6 Closing documents
               span.transparent-text A small description of the item, lorem ipsum so to speak
     section.cases
+      .section
+        h6.subtitle Our cases
       .slider
         .section
           button(data-click-action='front:prevCase').slider-button.slider-prev
             +img('slider-arrow-prev.svg')
-          button(data-click-action='front:prevCase').slider-button.slider-next
+          button(data-click-action='front:nextCase').slider-button.slider-next
             +img('slider-arrow-next.svg')
         .slides
-          .slide.section
-            .cases-left
-              .cases-date 21.01.2021
-              .cases-title INTER INSURANCE
-              .cases-desc A small description of the item, lorem ipsum so to speak. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae erat dui.
-              .cases-link www.INTERINSURANCE.com
-            .cases-right
-              +img('cases-slide-img.png')
+          -for(let i = 0; i < 5; i++)
+            .slide
+              .cases-left
+                .cases-date 21.01.2021 #[=i]
+                .cases-title INTER INSURANCE
+                .cases-desc.transparent-text A small description of the item, lorem ipsum so to speak. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae erat dui.
+                a(href='#').low-link www.INTERINSURANCE.com
+              .cases-right
+                +img('cases-slide-img.png')
     section.cases
       .section
         h5.subtitle Cases in numbers
@@ -238,7 +241,7 @@ block content
                 .review-position.transparent-text CEO of Inter Insurence
                 p.review-text.transparent-text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                 .review-date.transparent-text 10.02.2021
-                a(href='#').review-site www.INTERINSURANCE.com
+                a(href='#').low-link www.INTERINSURANCE.com
           button.slider-button.slider-next(data-click-action='front:nextReview')
             +img('slider-arrow-next.svg')
     section.serv
