@@ -250,6 +250,8 @@ body
 
 .cases
 	padding-bottom: 129px
+	&.mini
+		padding-bottom: 72px
 	&-list
 		padding-top: 82px
 	&-item
@@ -270,8 +272,32 @@ body
 	&-right
 		flex-shrink: 0
 		flex-grow: 0
+	.slider
+		&-dots
+			display: flex
+			position: absolute
+			left: 99px
+			top: 145px
+			.dot
+				+wh(18px)
+				+dfc
+				margin-right: 26px
+				border-radius: 100%
+				border: 2px solid transparent
+				&:after
+					+af
+					+wh(14px)
+					background-color: $orange
+					border-radius: 100%
+				&,&:after
+					transition: .35s ease
+				&.active
+					border-color: $orange
+					&:after
+						+wh(10px)
 	.slides
 		max-width: calc((1170px * 3) + 200px)
+		padding-top: 73px
 		margin: 0 auto
 	.slide
 		flex-basis: 1170px
@@ -279,8 +305,7 @@ body
 		padding: 34px 60px 34px 99px
 		margin: 0 50px
 		&:first-child
-			margin-left: calc(((100% - 1170px) / 2) - 100px - 1170px - 1270px)
-
+			margin-left: calc(((100% - 1170px) / 2) - 2540px)
 
 
 .diagram
@@ -298,7 +323,7 @@ body
 		margin-top: 73px
 		box-shadow: 0 4px 35px rgba(0, 0, 0, 0.1)
 	.slide
-		padding: 71px 125px 92px
+		padding: 71px 115px 92px
 
 
 

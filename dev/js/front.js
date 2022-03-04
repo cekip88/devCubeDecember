@@ -12,25 +12,84 @@ class Front extends _front{
       .on(_,'nextReview')
       .on(_,'prevCase')
       .on(_,'nextCase')
+      .on(_,'caseDot')
       .on(_,'createOrderSuccess')
       .on(_,'createOrderFail');
   }
   createOrderSuccess(orderData){}
   createOrderFail(orderData){}
 
+  changeActiveDot(slider,toNext = true) {
+    let
+      dots = slider.querySelector('.slider-dots'),
+      activeDot = dots.querySelector('.active');
+    activeDot.classList.remove('active');
+    if (!toNext) {
+      if (activeDot.previousElementSibling) {
+        activeDot.previousElementSibling.classList.add('active')
+      } else {
+        dots.lastElementChild.classList.add('active')
+      }
+    } else {
+      if (activeDot.nextElementSibling) {
+        activeDot.nextElementSibling.classList.add('active')
+      } else {
+        dots.firstElementChild.classList.add('active')
+      }
+    }
+  }
   prevCase(clickData){
+    const _ = this;
+    if (_.animation) return;
+    _.animation = true;
     let
       btn = clickData.item,
       slider = btn.closest('.slider'),
       slides = slider.querySelector('.slides');
     slides.prepend(slides.lastElementChild);
+    _.changeActiveDot(slider,false);
+    setTimeout(function (){
+      _.animation = false;
+    },350)
   }
   nextCase(clickData){
+    const _ = this;
+    if (_.animation) return;
+    _.animation = true;
     let
       btn = clickData.item,
       slider = btn.closest('.slider'),
       slides = slider.querySelector('.slides');
     slides.append(slides.firstElementChild);
+    _.changeActiveDot(slider);
+    setTimeout(function (){
+      _.animation = false;
+    },350)
+  }
+  caseDot(clickData){
+    const _ = this;
+    let btn = clickData.item;
+    if (btn.classList.contains('active')) return;
+    if (_.animation) return;
+    _.animation = true;
+    let
+      position = parseInt(btn.getAttribute('data-position')),
+      activeBtn = btn.parentElement.querySelector('.active'),
+      prevPos = parseInt(activeBtn.getAttribute('data-position')),
+      count = position - prevPos,
+      slider = btn.closest('.slider'),
+      slides = slider.querySelector('.slides');
+    if (count < 0) {
+      count = slides.children.length + count;
+    }
+    for (let i = 0; i < count; i++) {
+      slides.append(slides.firstElementChild)
+    }
+    activeBtn.classList.remove('active');
+    btn.classList.add('active');
+    setTimeout(function (){
+      _.animation = false;
+    },350)
   }
 
   prevReview(clickData){
@@ -158,6 +217,27 @@ class Front extends _front{
     }
   }
 
+  sliderInit(){
+    let slider = document.querySelector('.cases .slider');
+    if (!slider) return;
+    let
+      slides = slider.querySelector('.slides'),
+      dots = slider.querySelector('.slider-dots');
+    slides.prepend(slides.lastElementChild);
+    if (window.innerWidth >= 1200) {
+      slides.prepend(slides.lastElementChild);
+    }
+    let count = slides.children.length;
+    for (let i = 0; i < count; i++) {
+      let dot = document.createElement('BUTTON');
+      dot.setAttribute('data-position',i);
+      dot.setAttribute('data-click-action','front:caseDot');
+      dot.className = 'dot';
+      dots.append(dot);
+      if (i === 0) dot.classList.add('active');
+    }
+  }
+
   init(){
     const _ = this;
     _.headScroll();
@@ -166,6 +246,7 @@ class Front extends _front{
     diagrams.forEach(function (diagram){
       _.rotateDegree(diagram);
     })
+    _.sliderInit();
   }
 }
 new Front();

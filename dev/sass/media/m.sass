@@ -8,6 +8,7 @@ html
 	@extend %tr
 	height: 49px
 	padding: 10px 0
+	background-color: $white
 	overflow: hidden
 	position: fixed
 	top: 0
@@ -16,8 +17,6 @@ html
 	z-index: 100
 	&.scrolled
 		box-shadow: 0 0 5px rgba($black,.3)
-	&.active,&.scrolled
-		background-color: $white
 	&.active
 		height: 100vh
 		.head-burger span
@@ -733,6 +732,8 @@ html
 		margin-top: 20px
 	.slider
 		position: relative
+		&-dots
+			display: none
 	.slides
 		display: flex
 		align-items: center

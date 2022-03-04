@@ -100,7 +100,7 @@ block content
             .guarant-text
               h6 Closing documents
               span.transparent-text A small description of the item, lorem ipsum so to speak
-    section.cases
+    section.cases.mini
       .section
         h6.subtitle Our cases
       .slider
@@ -109,12 +109,13 @@ block content
             +img('slider-arrow-prev.svg')
           button(data-click-action='front:nextCase').slider-button.slider-next
             +img('slider-arrow-next.svg')
+          .slider-dots
         .slides
-          -for(let i = 0; i < 5; i++)
+          -for(let i = 0; i < 10; i++)
             .slide
               .cases-left
-                .cases-date 21.01.2021 #[=i]
-                .cases-title INTER INSURANCE
+                .cases-date 21.01.2021
+                .cases-title INTER INSURANCE ##[=i]
                 .cases-desc.transparent-text A small description of the item, lorem ipsum so to speak. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae erat dui.
                 a(href='#').low-link www.INTERINSURANCE.com
               .cases-right
