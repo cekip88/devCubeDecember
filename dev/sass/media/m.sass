@@ -527,11 +527,29 @@ html
 	padding: 40px 0 20px
 	&-title
 		margin-top: -8px
-		margin-bottom: -10px
+		margin-bottom: -6px
+		&:last-child
+			margin: 0 0 10px
 	&-text
+		width: 60%
+		display: flex
+		flex-direction: column
 		position: absolute
+		z-index: 1
 		span
+			margin-bottom: -10px
+			display: flex
+			align-items: center
 			font-size: 12px
+			&:before
+				+af
+				+wh(4px)
+				margin-right: 5px
+				margin-top: 2px
+				background-color: #4F4D8E
+				border-radius: 100%
+			&:last-child
+				margin-bottom: 0
 	&-item
 		@extend %dfc
 		margin-bottom: -40px
@@ -544,6 +562,7 @@ html
 				opacity: 1
 		img
 			display: block
+			transform: scale(1.1)
 
 
 .audit
@@ -570,6 +589,7 @@ html
 
 
 .guarant
+	display: none
 	padding-bottom: 40px
 	&-list
 		margin-top: 20px

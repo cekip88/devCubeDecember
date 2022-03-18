@@ -239,8 +239,12 @@ body
 	padding: 112px 0 80px
 	&-list
 		margin-top: 40px
-	&-text
-		width: calc(100% - 88px)
+	&-item
+		img
+			transform: scale(1.3)
+		&:last-child
+			img
+				transform: scale(1.3) translateX(-8px)
 
 
 .audit
@@ -299,7 +303,7 @@ body
 			left: 99px
 			top: 145px
 			.dot
-				+wh(18px)
+				+wh(19px)
 				+dfc
 				margin-right: 26px
 				border-radius: 100%
