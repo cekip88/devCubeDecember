@@ -1,22 +1,22 @@
 extends template/main
 append vars
   -
-    page_title = 'Services'
+    page_title = 'Services - DevOps'
 block content
   main
-    section.fb.green
+    section.fb.light-brown
       .section
         .bread-crumbs
           a(href='./') Home /
           a(href='./services.html') &nbsp;Services /
-          span &nbsp;Web and Mobile Applications
+          span &nbsp;DevOps
         .row
           .fb-inner
-            h1.subtitle Web and Mobile Applications
-            p.text We are a web & app development company that turns your ideas into a new driving force of your business. To create a fast and smooth app for any platform, we also deliver products with an outsourcing app development model. This model gives a reasonable solution to control the budget and other resources. Our team connects conventional essential technologies and architecture with the unique logic of the app. Combined with a polished design and UI/UX an app becomes the one that reaches goals of our customers and wins the hearts of users.
+            h1.subtitle Services
+            p.text We make DevOps adoption easy to allow you to build and deliver software faster. Our DevOps certified experts and solutions help you achieve agile automation and deploy updates that respond to your business needs and development. We at DevCube have developed a unique and highly secure product that allows software engineers to create working environments from dev through testing and staging to production just in 7 minutes, as well as run CI/CD pipelines on their own infrastructure.
             a(href='./contact.html#contact').button Hire us
           .fb-img
-            +img('mobile-app-bgc.png')
+            +img('serv-item-5.svg')
     section.steps
       .section
         h5.subtitle How it works
@@ -131,7 +131,7 @@ block content
                 a(href='#').low-link www.INTERINSURANCE.com
               .cases-right
                 +img('cases-slide-img.png')
-    section.cases
+    section.cases.cases-innumbers
       .section
         h5.subtitle Cases in numbers
         ul.cases-list
@@ -257,37 +257,7 @@ block content
           button.slider-button.slider-next(data-click-action='front:nextReview')
             +img('slider-arrow-next.svg')
     section.serv
-      .section
-        h5.subtitle More services
-        ul.serv-list
-          li.serv-item
-            h6.serv-item-title API
-            .serv-item-row
-              p.serv-item-text.transparent-text DevCube has a wealth of experience in API development and integration as well as in related areas like creating complex SaaS solutions, all this together with web and mobile applications. We offer microservices API integration solutions that integrate with your entire operations infrastructure.
-              .serv-item-img
-                +img('serv-api.svg')
-            a(href='/contact.html#contact').button HIRE US
-          li.serv-item
-            h6.serv-item-title E-commerce
-            .serv-item-row
-              p.serv-item-text.transparent-text We build e-commerce websites that meet your goals, attract visitors, increase conversion rate, and generate sales. Shopify, WordPress, or custom e-commerce website — we will develop an engaging eStore that will present your customers with an intuitive and scalable shopping experience.
-              .serv-item-img
-                +img('serv-ecom.svg')
-            a(href='/contact.html#contact').button HIRE US
-          li.serv-item
-            h6.serv-item-title E-commerce
-            .serv-item-row
-              p.serv-item-text.transparent-text We build e-commerce websites that meet your goals, attract visitors, increase conversion rate, and generate sales. Shopify, WordPress, or custom e-commerce website — we will develop an engaging eStore that will present your customers with an intuitive and scalable shopping experience.
-              .serv-item-img
-                +img('serv-ecom.svg')
-            a(href='/contact.html#contact').button HIRE US
-          li.serv-item
-            h6.serv-item-title API
-            .serv-item-row
-              p.serv-item-text.transparent-text DevCube has a wealth of experience in API development and integration as well as in related areas like creating complex SaaS solutions, all this together with web and mobile applications. We offer microservices API integration solutions that integrate with your entire operations infrastructure.
-              .serv-item-img
-                +img('serv-api.svg')
-            a(href='/contact.html#contact').button HIRE US
+      include parts/services
     section.together
       .section
         .together-row.row

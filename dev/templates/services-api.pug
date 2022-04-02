@@ -1,0 +1,269 @@
+extends template/main
+append vars
+  -
+    page_title = 'Services - Integrations'
+block content
+  main
+    section.fb.peach
+      .section
+        .bread-crumbs
+          a(href='./') Home /
+          a(href='./services.html') &nbsp;Services /
+          span &nbsp;Integrations
+        .row
+          .fb-inner
+            h1.subtitle Integrations
+            p.text DevCube has a wealth of experience in API development and integration as well as in related areas like creating complex SaaS solutions, all this together with web and mobile applications. We offer microservices API integration solutions that integrate with your entire operations infrastructure.
+            a(href='./contact.html#contact').button Hire us
+          .fb-img
+            +img('serv-item-2.svg')
+    section.steps
+      .section
+        h5.subtitle How it works
+        ul.steps-list
+          li.steps-item
+            .steps-text
+              h6.steps-title Scope of Work
+              span.transparent-text requirements analysis
+              span.transparent-text technologies analysis
+            +img('step-start.svg')
+          li.steps-item
+            .steps-text
+              h6.steps-title Estimation
+              span.transparent-text Effort estimation
+              span.transparent-text Time lines and planning
+            +img('steps.svg')
+          li.steps-item
+            .steps-text
+              h6.steps-title Proof of concept
+              span.transparent-text Product development
+              span.transparent-text Stages of development
+            +img('steps.svg')
+          li.steps-item
+            .steps-text
+              h6.steps-title Development
+              span.transparent-text Dev process and testing
+            +img('steps.svg')
+          li.steps-item
+            .steps-text
+              h6.steps-title Production
+            +img('steps.svg')
+          li.steps-item
+            .steps-text
+              h6.steps-title Maintanance
+            +img('step-end.svg')
+    section.audit
+      .section
+        h5.subtitle Audience description
+        ul.audit-list
+          li.audit-item
+            include ../img/audit-bgc-1.svg
+            .audit-inner
+              .audit-inner-img
+                +img('audit-star.png')
+              h6.audit-title Title
+              span Pain points
+              span Desires
+              span Solution
+              strong Result
+              a(href='/contact.html#contact').button-reverse HIRE US
+          li.audit-item
+            include ../img/audit-bgc-2.svg
+            .audit-inner
+              .audit-inner-img
+                +img('audit-star.png')
+              h6.audit-title Title
+              span Pain points
+              span Desires
+              span Solution
+              strong Result
+              a(href='/contact.html#contact').button-reverse HIRE US
+          li.audit-item
+            include ../img/audit-bgc-3.svg
+            .audit-inner
+              .audit-inner-img
+                +img('audit-star.png')
+              h6.audit-title Title
+              span Pain points
+              span Desires
+              span Solution
+              strong Result
+              a(href='/contact.html#contact').button-reverse HIRE US
+    section.guarant
+      .section
+        h5.subtitle Result guarantee
+        ul.guarant-list
+          li.guarant-item
+            .guarant-img
+              include ../img/guarant-dollar.svg
+            .guarant-text
+              h6 Return of funds
+              span.transparent-text A small description of the item, lorem ipsum so to speak
+          li.guarant-item
+            .guarant-img
+              include ../img/guarant-bell.svg
+            .guarant-text
+              h6 Milestone Alerts
+              span.transparent-text A small description of the item, lorem ipsum so to speak
+          li.guarant-item
+            .guarant-img
+              include ../img/guarant-case.svg
+            .guarant-text
+              h6 Closing documents
+              span.transparent-text A small description of the item, lorem ipsum so to speak
+    section.cases.mini
+      .section
+        h6.subtitle Our cases
+      .slider
+        .section
+          button(data-click-action='front:prevCase').slider-button.slider-prev
+            +img('slider-arrow-prev.svg')
+          button(data-click-action='front:nextCase').slider-button.slider-next
+            +img('slider-arrow-next.svg')
+          .slider-dots
+        .slides
+          -for(let i = 0; i < 6; i++)
+            .slide
+              .cases-left
+                .cases-date 21.01.2021
+                .cases-title INTER INSURANCE ##[=i]
+                .cases-desc.transparent-text A small description of the item, lorem ipsum so to speak. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae erat dui.
+                a(href='#').low-link www.INTERINSURANCE.com
+              .cases-right
+                +img('cases-slide-img.png')
+    section.cases.cases-innumbers
+      .section
+        h5.subtitle Cases in numbers
+        ul.cases-list
+          li.cases-item
+            .diagram
+              .pieBackground
+                .pieField
+              .wrapper
+                .object
+                  .round
+                .object.rotate
+                  .round
+                .pieSlice1.hold
+                  .pie
+                .pieSlice2.hold
+                  .pie
+              .diagram-inner 75
+            .cases-text
+              h6 Title
+              span.transparent-text Short step description
+          li.cases-item
+            .diagram
+              .pieBackground
+                .pieField
+              .wrapper
+                .object
+                  .round
+                .object.rotate
+                  .round
+                .pieSlice1.hold
+                  .pie
+                .pieSlice2.hold
+                  .pie
+              .diagram-inner 15
+            .cases-text
+              h6 Title
+              span.transparent-text Short step description
+          li.cases-item
+            .diagram
+              .pieBackground
+                .pieField
+              .wrapper
+                .object
+                  .round
+                .object.rotate
+                  .round
+                .pieSlice1.hold
+                  .pie
+                .pieSlice2.hold
+                  .pie
+              .diagram-inner 60
+            .cases-text
+              h6 Title
+              span.transparent-text Short step description
+          li.cases-item
+            .diagram
+              .pieBackground
+                .pieField
+              .wrapper
+                .object
+                  .round
+                .object.rotate
+                  .round
+                .pieSlice1.hold
+                  .pie
+                .pieSlice2.hold
+                  .pie
+              .diagram-inner 90
+            .cases-text
+              h6 Title
+              span.transparent-text Short step description
+          li.cases-item
+            .diagram
+              .pieBackground
+                .pieField
+              .wrapper
+                .object
+                  .round
+                .object.rotate
+                  .round
+                .pieSlice1.hold
+                  .pie
+                .pieSlice2.hold
+                  .pie
+              .diagram-inner 12
+            .cases-text
+              h6 Title
+              span.transparent-text Short step description
+          li.cases-item
+            .diagram
+              .pieBackground
+                .pieField
+              .wrapper
+                .object
+                  .round
+                .object.rotate
+                  .round
+                .pieSlice1.hold
+                  .pie
+                .pieSlice2.hold
+                  .pie
+              .diagram-inner 45
+            .cases-text
+              h6 Title
+              span.transparent-text Short step description
+    section.review
+      .section
+        h5.subtitle Testimonials
+      .slider(data-position=0)
+        .section
+          button.slider-button.slider-prev(data-click-action='front:prevReview' disabled)
+            +img('slider-arrow-prev.svg')
+          .slides
+            -for (let i = 0; i < 5; i++)
+              .slide
+                .review-photo
+                  +img('1542391997723.jpg')
+                .review-name Jason McReynolds
+                .review-position.transparent-text Founder, Fran Metrics
+                p.review-text.transparent-text DevCube's software has helped the client ramp up their marketing efforts and sign major contracts. The software has received wonderful feedback from the end clients. The team's responsiveness and attention to detail make them a great team to work with.
+                .review-date.transparent-text May 2020 - Ongoing
+                //a(href='#').low-link www.INTERINSURANCE.com
+          button.slider-button.slider-next(data-click-action='front:nextReview')
+            +img('slider-arrow-next.svg')
+    section.serv
+      include parts/services
+    section.together
+      .section
+        .together-row.row
+          .together-left
+            h2.title Let's work together?
+            p.text Your one-stop to develop, integrate, and support your digital solutions ideas.
+            a(href='./contact.html#contact').button Hire us
+          .together-right
+            +img('undraw_happy_announcement_re_tsm0 1.svg')

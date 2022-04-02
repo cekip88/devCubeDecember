@@ -145,6 +145,7 @@ body
 				left: 50%
 				bottom: 2px
 				transition: .35s ease
+		a.services-item-title
 			&:hover
 				&:after
 					width: 100%
@@ -271,6 +272,20 @@ body
 
 .serv
 	padding-bottom: 120px
+a.serv-item-title
+	position: relative
+	&:after
+		+af
+		+wh(0,2px)
+		background-color: #4F4D8E
+		position: absolute
+		left: 50%
+		bottom: 1px
+		transition: .35s ease
+	&:hover
+		&:after
+			width: 100%
+			left: 0
 
 .cases
 	padding-bottom: 129px
@@ -318,7 +333,7 @@ body
 				&.active
 					border-color: $orange
 					&:after
-						+wh(10px)
+						+wh(9px)
 	.slides
 		max-width: calc((1170px * 3) + 200px)
 		padding-top: 73px
