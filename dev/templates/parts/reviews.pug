@@ -1,0 +1,27 @@
+.section
+	h5.subtitle Testimonials
+.slider(data-position=0)
+	.section
+		button.slider-button.slider-prev(data-click-action='front:prevReview' disabled)
+			+img('slider-arrow-prev.svg')
+		.slides
+			.slide
+				.review-photo
+					+img('1542391997723.jpg')
+				.review-name Jason McReynolds
+				.review-position.transparent-text Founder, Fran Metrics
+				p.review-text.transparent-text DevCube's software has helped the client ramp up their marketing efforts and sign major contracts. The software has received wonderful feedback from the end clients. The team's responsiveness and attention to detail make them a great team to work with.
+				.review-date.transparent-text May 2020 - Ongoing
+				//a(href='#').low-link www.INTERINSURANCE.com
+			.slide
+				.review-photo
+					+img('1516304653855.jpg')
+				.review-name Igor Kapelnikov
+				.review-position.transparent-text CEO, Global Forwarding Enterprises LLC
+				p.review-text.transparent-text
+					span - What did you find most impressive or unique about this company?
+					span - They deliver their promises and do not overcharge the bill.
+				.review-date.transparent-text Jan. 2020 - Ongoing
+				//a(href='#').low-link www.INTERINSURANCE.com
+		button.slider-button.slider-next(data-click-action='front:nextReview')
+			+img('slider-arrow-next.svg')

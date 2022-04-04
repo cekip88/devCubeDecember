@@ -223,19 +223,39 @@ class Front extends _front{
     let
       slides = slider.querySelector('.slides'),
       dots = slider.querySelector('.slider-dots');
+
+    for (let i = 0; i < slides.children.length; i++) {
+	    slides.children[i].querySelector('.cases-right img').setAttribute('src',`img/cases-slide-img-${i + 1}.png`);
+    }
+
     slides.prepend(slides.lastElementChild);
     if (window.innerWidth >= 1200) {
       slides.prepend(slides.lastElementChild);
     }
     let count = slides.children.length;
-    for (let i = 0; i < count; i++) {
-      let dot = document.createElement('BUTTON');
-      dot.setAttribute('data-position',i);
-      dot.setAttribute('data-click-action','front:caseDot');
-      dot.className = 'dot';
-      dots.append(dot);
-      if (i === 0) dot.classList.add('active');
+
+	  for (let i = 0; i < count; i++) {
+		  let dot = document.createElement('BUTTON');
+		  dot.setAttribute('data-position',i);
+		  dot.setAttribute('data-click-action','front:caseDot');
+		  dot.className = 'dot';
+		  dots.append(dot);
+		  if (i === 0) dot.classList.add('active');
+	  }
+
+    if (count < 5) {
+    	let mult = Math.ceil(5 / count);
+      count = mult * count;
+	    let len = slides.children.length;
+      for (let i = 0; i < mult - 1; i++) {
+        for (let j = 0; j < len; j++) {
+        	let x = window.innerWidth < 1200 ? j : j - 1;
+        	slides.append(slides.children[j].cloneNode(true));
+        }
+      }
     }
+
+
   }
 
   init(){
